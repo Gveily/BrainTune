@@ -1,26 +1,62 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FC } from "react";
+import {
+  AppLogo,
+  CommonContainer, FooterWrapper,
+  HeaderWrapper,
+  MainWrapper,
+  NavigationBlock,
+  NavigationItem
+} from "./pages/App.styled";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+interface AppProps {
+  children: string | JSX.Element | JSX.Element[];
+}
+
+const App: FC<AppProps> = ({ children }) => {
+  const Header = () => {
+    return (
+      <CommonContainer>
+        <HeaderWrapper>
+          <AppLogo />
+          <NavigationBlock>
+            <NavigationItem href='https://google.com/' target='_blank'>
+              Pricing
+            </NavigationItem>
+            <NavigationItem href='https://google.com/' target='_blank'>
+              Contact
+            </NavigationItem>
+          </NavigationBlock>
+        </HeaderWrapper>
+      </CommonContainer>
+    )
+  }
+
+  const Footer = () => {
+    return <CommonContainer>
+        <FooterWrapper>
+            <AppLogo />
+            <NavigationBlock>
+                <NavigationItem href='https://google.com/' target='_blank'>
+                    Privacy
+                </NavigationItem>
+                <NavigationItem href='https://google.com/' target='_blank'>
+                    Refunds
+                </NavigationItem>
+                <NavigationItem href='https://google.com/' target='_blank'>
+                    Support
+                </NavigationItem>
+            </NavigationBlock>
+        </FooterWrapper>
+    </CommonContainer>
+  }
+
+  return <>
+    <Header/>
+    <MainWrapper>
+      { children }
+    </MainWrapper>
+    <Footer/>
+  </>
 }
 
 export default App;
