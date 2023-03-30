@@ -205,15 +205,15 @@ export const TitleSpan = styled.span`
 
 export const ImproveSubtitle = styled.h5`
   font-size: 32px;
-  line-height: 48px;
-  font-weight: 700;
+  font-family: 'SF Pro Display';
+  font-weight: 400;
   text-align: center;
   color: ${(props) => props.theme.colors.shadeOfGrey};
   @media (max-width: 744px) {
     font-size: 24px;
     line-height: 36px;
   }
-  @media (max-width: 290px) {
+  @media (max-width: 390px) {
     font-size: 16px;
   }
 `;
