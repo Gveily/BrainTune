@@ -1,11 +1,15 @@
 import { FC } from "react";
 import {
   AppLogo,
-  CommonContainer, FooterWrapper,
+  CommonContainer,
+  FooterWrapper,
   HeaderWrapper,
+  HumburgerMenu,
   MainWrapper,
   NavigationBlock,
-  NavigationItem
+  NavigationBlockFooter,
+  NavigationItem,
+  NavigationItemFooter,
 } from "./pages/App.styled";
 
 interface AppProps {
@@ -19,44 +23,47 @@ const App: FC<AppProps> = ({ children }) => {
         <HeaderWrapper>
           <AppLogo />
           <NavigationBlock>
-            <NavigationItem href='https://google.com/' target='_blank'>
+            <NavigationItem href="https://google.com/" target="_blank">
               Pricing
             </NavigationItem>
-            <NavigationItem href='https://google.com/' target='_blank'>
+            <NavigationItem href="https://google.com/" target="_blank">
               Contact
             </NavigationItem>
           </NavigationBlock>
+          <HumburgerMenu />
         </HeaderWrapper>
       </CommonContainer>
-    )
-  }
+    );
+  };
 
   const Footer = () => {
-    return <CommonContainer>
+    return (
+      <CommonContainer>
         <FooterWrapper>
-            <AppLogo />
-            <NavigationBlock>
-                <NavigationItem href='https://google.com/' target='_blank'>
-                    Privacy
-                </NavigationItem>
-                <NavigationItem href='https://google.com/' target='_blank'>
-                    Refunds
-                </NavigationItem>
-                <NavigationItem href='https://google.com/' target='_blank'>
-                    Support
-                </NavigationItem>
-            </NavigationBlock>
+          <AppLogo />
+          <NavigationBlockFooter>
+            <NavigationItemFooter href="https://google.com/" target="_blank">
+              Privacy
+            </NavigationItemFooter>
+            <NavigationItemFooter href="https://google.com/" target="_blank">
+              Refunds
+            </NavigationItemFooter>
+            <NavigationItemFooter href="https://google.com/" target="_blank">
+              Support
+            </NavigationItemFooter>
+          </NavigationBlockFooter>
         </FooterWrapper>
-    </CommonContainer>
-  }
+      </CommonContainer>
+    );
+  };
 
-  return <>
-    <Header/>
-    <MainWrapper>
-      { children }
-    </MainWrapper>
-    <Footer/>
-  </>
-}
+  return (
+    <>
+      <Header />
+      <MainWrapper>{children}</MainWrapper>
+      <Footer />
+    </>
+  );
+};
 
 export default App;
