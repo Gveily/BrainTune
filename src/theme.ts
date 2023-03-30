@@ -8,6 +8,7 @@ export const defaultTheme = {
     primaryViolet: '#5F3FE1',
     buttonTextWhite: '#FDFDFD',
     defaultBlack: '#000',
-    cardBackground: '#F8F8F8'
+    cardBackground: '#F8F8F8',
+    shadeOfGrey: '#212121'
   }
 }
