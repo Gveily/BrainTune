@@ -74,6 +74,8 @@ export const NavigationItem = styled.a`
   color: ${(props) => props.theme.colors.primaryBlack};
   font-weight: 400;
   font-size: 24px;
+  position: relative;
+  z-index: 10;
 `;
 
 export const MainWrapper = styled.main`

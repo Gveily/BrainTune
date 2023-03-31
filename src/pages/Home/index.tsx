@@ -1,37 +1,66 @@
-import { FC } from "react";
-import { CommonContainer } from "../App.styled";
+import {FC} from "react";
+import {CommonContainer} from "../App.styled";
 import {
-  Caption, Card, CardDescription, CardIcon, CardsContainer, CardTitle,
+  Caption,
+  Card,
+  CardDescription,
+  CardIcon,
+  CardsContainer,
+  CardTitle,
   HomeBackground,
   HomeHeading,
   HomeHeadingItalic,
-  HomeScreenContainer,
-  StartTrainingButton, StartTrainingWrapper
+  HomeScreenContainer, HowMusicalTraining,
+  ImproveSubtitle,
+  ImproveTitle,
+  ImproveYourBrainDescription,
+  ImproveYourBrainWrapper,
+  StartTrainingButton,
+  StartTrainingWrapper,
+  SubtitleSpan,
+  TitleSpan,
 } from "./home.styled";
 
 const Home: FC = () => {
   const ImproveYourBrain = () => {
-    return <div>Improve your brain should be below</div>
-  }
+    return (
+      <ImproveYourBrainWrapper>
+        <ImproveYourBrainDescription>
+          <ImproveTitle>
+            Improve your brain <br/> in <TitleSpan>a unique</TitleSpan> way
+          </ImproveTitle>
+          <ImproveSubtitle>
+            We’ve partnered with experts in neurology and music education to
+            design a cognitive training program that{" "}
+            <SubtitleSpan>
+              engages both hemispheres of the brain through the unique power of
+              music.
+            </SubtitleSpan>
+          </ImproveSubtitle>
+        </ImproveYourBrainDescription>
+        <HowMusicalTraining/>
+      </ImproveYourBrainWrapper>
+    );
+  };
 
   const StartScreen = () => {
     const cards = [
       {
         id: 1,
-        label: 'Research-based',
-        description: 'Backed by latest scientific findings'
+        label: "Research-based",
+        description: "Backed by latest scientific findings",
       },
       {
         id: 2,
-        label: 'Personalized',
-        description: 'Adapts to your goals and progress'
+        label: "Personalized",
+        description: "Adapts to your goals and progress",
       },
       {
         id: 3,
-        label: 'For every age',
-        description: 'It’s never too late to get into music'
-      }
-    ]
+        label: "For every age",
+        description: "It’s never too late to get into music",
+      },
+    ];
 
     return (
       <HomeScreenContainer>
@@ -40,42 +69,36 @@ const Home: FC = () => {
           through <HomeHeadingItalic>music</HomeHeadingItalic>
         </HomeHeading>
         <StartTrainingWrapper isHomeScreen>
-          <StartTrainingButton>
-            Start training
-          </StartTrainingButton>
-          <Caption>
-            🎵 no music instrument or training needed
-          </Caption>
+          <StartTrainingButton>Start training</StartTrainingButton>
+          <Caption>🎵 no music instrument or training needed</Caption>
         </StartTrainingWrapper>
         <HomeBackground/>
 
         <CardsContainer>
           {cards.map((item) => {
-            return <Card key={item.id}>
-              <CardIcon />
-              <CardTitle>
-                {item.label}
-              </CardTitle>
-              <CardDescription>
-                {item.description}
-              </CardDescription>
-            </Card>
+            return (
+              <Card key={item.id}>
+                <CardIcon/>
+                <CardTitle>{item.label}</CardTitle>
+                <CardDescription>{item.description}</CardDescription>
+              </Card>
+            );
           })}
-
         </CardsContainer>
-
       </HomeScreenContainer>
-    )
+    );
   };
 
-
-
-  return <CommonContainer style={{
-    position: 'relative'
-  }}>
-    <StartScreen/>
-    <ImproveYourBrain />
-  </CommonContainer>
-}
+  return (
+    <CommonContainer
+      style={{
+        position: "relative",
+      }}
+    >
+      <StartScreen/>
+      <ImproveYourBrain/>
+    </CommonContainer>
+  );
+};
 
 export default Home;
