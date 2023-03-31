@@ -6,7 +6,7 @@ import {
   MainWrapper,
   NavigationBlock,
   NavigationItem
-} from "./pages/App.styled";
+} from "./App.styled";
 import {Caption, StartTrainingButton, StartTrainingWrapper} from "./pages/Home/home.styled";
 
 interface AppProps {

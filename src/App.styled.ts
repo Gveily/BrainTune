@@ -1,17 +1,18 @@
 import styled from "styled-components";
-import logo from '../images/logo.svg';
-import burger from '../images/burger.svg';
+import logo from './images/logo.svg';
+import burger from './images/burger.svg';
 
 export const CommonContainer = styled.div`
-  width: 1000px;
+  max-width: 1000px;
+  width: 100%;
   margin: 0 auto;
   
-  @media (max-width: 744px) {
-    width: 632px;
+  @media (min-width: 391px) and (max-width: 744px) {
+    max-width: 632px;
   }
-  
+
   @media (max-width: 390px) {
-    width: 342px;
+    max-width: 342px;
   }
 `;
 
@@ -23,7 +24,6 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const FooterContainer = styled.div`
-  width: 100%;
   background-color: #F9F6FF;
   padding: 38px 0;
 `

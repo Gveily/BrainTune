@@ -166,7 +166,7 @@ export const ImproveYourBrainWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 100px;
+  
   @media (max-width: 744px) {
     gap: 44px;
   }
@@ -246,17 +246,87 @@ export const SubtitleSpan = styled.span`
 export const HowMusicalTraining = styled.div`
   background-image: url(${frame});
   width: 1000px;
-  height: 550px;
+  height: 549px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  
   @media (max-width: 744px) {
     width: 632px;
     height: 352px;
   }
+  
+  @media (max-width: 620px) {
+    width: 440px;
+    height: 260px;
+  }
+  
   @media (max-width: 390px) {
     background-image: url(${framemobile});
     width: 342px;
     height: 198px;
   }
-`
+`;
 
+export const FoundersWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 94px;
+  margin-top: 150px;
+  
+  @media (max-width: 745px) {
+    display: none;
+  }
+`;
+export const FounderItem = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+`;
+export const FounderDescription = styled.div`
+  font-style: italic;
+`;
+export const FounderPhoto = styled.div<{ photoUrl: string }>`
+  width: 72px;
+  height: 72px;
+  background-image: url(${(props) => props.photoUrl});
+  margin-top: 24px;
+`;
+export const FounderName = styled.div`
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 8px;
+`;
+
+export const FounderJob = styled.div`
+  margin-top: 8px;
+`;
+export const FounderPosition = styled.div`
+  width: 75%;
+  text-align: center;
+  margin-top: 8px;
+`;
+
+export const FounderSeparator = styled.div`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -35px;
+  width: 1px;
+  height: 150px;
+  background-color: ${(props) => props.theme.colors.primaryBlack};
+  opacity: 0.3;
+`;
+
+export const CarouselWrapper = styled.div`
+  display: none;
+  
+  @media (max-width: 744px) {
+    display: block
+  }
+`;
