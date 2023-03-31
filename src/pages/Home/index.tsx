@@ -1,5 +1,5 @@
-import { FC } from "react";
-import { CommonContainer } from "../App.styled";
+import {FC} from "react";
+import {CommonContainer} from "../App.styled";
 import {
   Caption,
   Card,
@@ -10,7 +10,7 @@ import {
   HomeBackground,
   HomeHeading,
   HomeHeadingItalic,
-  HomeScreenContainer,
+  HomeScreenContainer, HowMusicalTraining,
   ImproveSubtitle,
   ImproveTitle,
   ImproveYourBrainDescription,
@@ -27,7 +27,7 @@ const Home: FC = () => {
       <ImproveYourBrainWrapper>
         <ImproveYourBrainDescription>
           <ImproveTitle>
-            Improve your brain <br /> in <TitleSpan>a unique</TitleSpan> way
+            Improve your brain <br/> in <TitleSpan>a unique</TitleSpan> way
           </ImproveTitle>
           <ImproveSubtitle>
             We’ve partnered with experts in neurology and music education to
@@ -38,6 +38,7 @@ const Home: FC = () => {
             </SubtitleSpan>
           </ImproveSubtitle>
         </ImproveYourBrainDescription>
+        <HowMusicalTraining/>
       </ImproveYourBrainWrapper>
     );
   };
@@ -71,13 +72,13 @@ const Home: FC = () => {
           <StartTrainingButton>Start training</StartTrainingButton>
           <Caption>🎵 no music instrument or training needed</Caption>
         </StartTrainingWrapper>
-        <HomeBackground />
+        <HomeBackground/>
 
         <CardsContainer>
           {cards.map((item) => {
             return (
               <Card key={item.id}>
-                <CardIcon />
+                <CardIcon/>
                 <CardTitle>{item.label}</CardTitle>
                 <CardDescription>{item.description}</CardDescription>
               </Card>
@@ -94,8 +95,8 @@ const Home: FC = () => {
         position: "relative",
       }}
     >
-      <StartScreen />
-      <ImproveYourBrain />
+      <StartScreen/>
+      <ImproveYourBrain/>
     </CommonContainer>
   );
 };

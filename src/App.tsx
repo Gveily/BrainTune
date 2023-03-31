@@ -1,4 +1,4 @@
-import { FC } from "react";
+import {FC, useEffect} from "react";
 import {
   AppLogo,
   CommonContainer, FooterContainer, FooterWrapper, HeaderBurger,
@@ -7,13 +7,13 @@ import {
   NavigationBlock,
   NavigationItem
 } from "./pages/App.styled";
-import { Caption, StartTrainingButton, StartTrainingWrapper } from "./pages/Home/home.styled";
+import {Caption, StartTrainingButton, StartTrainingWrapper} from "./pages/Home/home.styled";
 
 interface AppProps {
   children: string | JSX.Element | JSX.Element[];
 }
 
-const App: FC<AppProps> = ({ children }) => {
+const App: FC<AppProps> = ({children}) => {
   const isMobile = window.innerWidth < 391;
   const StartTrainingMobile = () => {
     return (
@@ -32,7 +32,7 @@ const App: FC<AppProps> = ({ children }) => {
     return (
       <CommonContainer>
         <HeaderWrapper>
-          <AppLogo />
+          <AppLogo/>
           <NavigationBlock isHeader>
             <NavigationItem href='https://google.com/' target='_blank'>
               Pricing
@@ -41,7 +41,7 @@ const App: FC<AppProps> = ({ children }) => {
               Contact
             </NavigationItem>
           </NavigationBlock>
-          <HeaderBurger />
+          <HeaderBurger/>
         </HeaderWrapper>
       </CommonContainer>
     )
@@ -52,7 +52,7 @@ const App: FC<AppProps> = ({ children }) => {
       <FooterContainer>
         <CommonContainer>
           <FooterWrapper>
-            <AppLogo />
+            <AppLogo/>
             <NavigationBlock>
               <NavigationItem href='https://google.com/' target='_blank'>
                 Privacy
@@ -61,8 +61,12 @@ const App: FC<AppProps> = ({ children }) => {
                 Refunds
               </NavigationItem>
               <NavigationItem href='https://google.com/' target='_blank'>
+
+
                 Support
-              </NavigationItem>
+              </NavigationItem
+
+              >
             </NavigationBlock>
           </FooterWrapper>
         </CommonContainer>
@@ -73,9 +77,9 @@ const App: FC<AppProps> = ({ children }) => {
   return <>
     <Header/>
     <MainWrapper>
-      { children }
+      {children}
     </MainWrapper>
-    {isMobile && <StartTrainingMobile />}
+    {isMobile && <StartTrainingMobile/>}
     <Footer/>
   </>
 }

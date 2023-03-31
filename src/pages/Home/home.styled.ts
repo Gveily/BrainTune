@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import homebg from "../../images/home-bg.svg";
 import checked from "../../images/checked-icon.svg";
+import frame from "../../images/frame.svg";
+import framemobile from "../../images/frame-mobile.svg";
+
 
 export const HomeScreenContainer = styled.div`
   position: relative;
@@ -162,6 +165,14 @@ export const CardDescription = styled.div`
 export const ImproveYourBrainWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  @media (max-width: 744px) {
+    gap: 44px;
+  }
+  @media (max-width: 390px) {
+    gap: 64px;
+  }
 `;
 
 export const ImproveYourBrainDescription = styled.div`
@@ -180,7 +191,6 @@ export const ImproveYourBrainDescription = styled.div`
 
 export const ImproveTitle = styled.h2`
   font-size: 64px;
-  font-weight: 700;
   text-align: center;
   color: ${(props) => props.theme.colors.shadeOfGrey};
   @media (max-width: 744px) {
@@ -204,10 +214,11 @@ export const TitleSpan = styled.span`
 `;
 
 export const ImproveSubtitle = styled.h5`
+  text-align: center;
   font-size: 32px;
   font-family: 'SF Pro Display';
   font-weight: 400;
-  text-align: center;
+  line-height: 48px;
   color: ${(props) => props.theme.colors.shadeOfGrey};
   @media (max-width: 744px) {
     font-size: 24px;
@@ -215,17 +226,37 @@ export const ImproveSubtitle = styled.h5`
   }
   @media (max-width: 390px) {
     font-size: 16px;
+    line-height: 24px;
   }
 `;
 
 export const SubtitleSpan = styled.span`
   font-size: 32px;
   font-style: italic;
-  font-weight: 800;
+  font-weight: 600;
   @media (max-width: 744px) {
     font-size: 24px;
   }
-  @media (max-width: 290px) {
+  @media (max-width: 390px) {
     font-size: 16px;
   }
 `;
+
+
+export const HowMusicalTraining = styled.div`
+  background-image: url(${frame});
+  width: 1000px;
+  height: 550px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media (max-width: 744px) {
+    width: 632px;
+    height: 352px;
+  }
+  @media (max-width: 390px) {
+    background-image: url(${framemobile});
+    width: 342px;
+    height: 198px;
+  }
+`
+

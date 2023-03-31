@@ -9,6 +9,7 @@ export const defaultTheme = {
     buttonTextWhite: '#FDFDFD',
     defaultBlack: '#000',
     cardBackground: '#F8F8F8',
-    shadeOfGrey: '#212121'
+    shadeOfGrey: '#212121',
+    borderFrame: `#008DAB36`,
   }
 }
