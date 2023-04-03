@@ -82,7 +82,7 @@ export const StartTrainingWrapper = styled.div<{ isHomeScreen?: boolean }>`
     bottom: 0;
     background-color: #fff;
     padding: 17px 0;
-    z-index: 999;
+    z-index: 10;
   }
 `;
 

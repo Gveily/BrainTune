@@ -49,25 +49,12 @@ export const NavigationBlock = styled.div<{isHeader?: boolean}>`
   display: flex;
   gap: 56px;
   
-  @media (max-width: 390px) {
+  @media (min-width: 320px) and (max-width: 544px) {
     display: ${(props) => props.isHeader ? 'none' : 'flex'};
     align-items: center;
     flex-direction: ${props => !props.isHeader ? 'column' : 'row'};
   }
 `;
-
-export const HeaderBurger = styled.div`
-  display: none;
-  width: 32px;
-  height: 32px;
-  background-image: url(${burger});
-  background-size: cover;
-  background-repeat: no-repeat;
-  
-  @media (max-width: 390px) {
-    display: block;
-  }
-`
 
 export const NavigationItem = styled.a`
   text-decoration: none;

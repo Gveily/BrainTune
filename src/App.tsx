@@ -1,13 +1,14 @@
-import {FC, useEffect} from "react";
+import {FC} from "react";
 import {
   AppLogo,
-  CommonContainer, FooterContainer, FooterWrapper, HeaderBurger,
+  CommonContainer, FooterContainer, FooterWrapper,
   HeaderWrapper,
   MainWrapper,
   NavigationBlock,
   NavigationItem
 } from "./App.styled";
 import {Caption, StartTrainingButton, StartTrainingWrapper} from "./pages/Home/home.styled";
+import { BurgerMenu } from "./components/Burger-Menu";
 
 interface AppProps {
   children: string | JSX.Element | JSX.Element[];
@@ -41,7 +42,7 @@ const App: FC<AppProps> = ({children}) => {
               Contact
             </NavigationItem>
           </NavigationBlock>
-          <HeaderBurger/>
+          <BurgerMenu />
         </HeaderWrapper>
       </CommonContainer>
     )
