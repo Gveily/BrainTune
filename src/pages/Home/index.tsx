@@ -48,7 +48,17 @@ import {
   UsingMusicItemImage,
   UsingMusicItemTextWrapper,
   UsingMusicItemHeading,
-  UsingMusicItemDescription, IsBraintuneContainer, IsBraintuneHeading, IsBraintuneSubheading, IsBraintuneParagraph,
+  UsingMusicItemDescription,
+  IsBraintuneContainer,
+  IsBraintuneHeading,
+  IsBraintuneSubheading,
+  IsBraintuneParagraph,
+  TrainingPlanContainer,
+  TrainingPlanHeading,
+  TrainingPlanSubheading,
+  TrainingPlanGoals,
+  TrainingPlanList,
+  TrainingPlanItem, TrainingPlanCheck, TrainingPlanText, TrainingPlanImage,
 } from "./home.styled";
 import founder1 from '../../images/founder-1.svg';
 import founder2 from '../../images/founder-2.svg';
@@ -276,7 +286,7 @@ const Home: FC = () => {
         color: '#B290FF',
         text: 'Motor learning and coordination'
       }
-    ]
+    ];
 
     return (
       <WorkoutContainer>
@@ -416,6 +426,60 @@ const Home: FC = () => {
     )
   }
 
+  const PersonalTrainingPlan = () => {
+    const items = [
+      {
+        id: 1,
+        label: 'Personalized training plan for any age'
+      },
+      {
+        id: 2,
+        label: 'Adapts to your goals and progress '
+      },
+      {
+        id: 3,
+        label: 'Tailored to your music tastes'
+      },
+      {
+        id: 4,
+        label: 'Family plans with joint activities'
+      }
+    ]
+
+    return (
+      <TrainingPlanContainer>
+        <TrainingPlanHeading>
+          Your personal <i>brain training plan</i>
+        </TrainingPlanHeading>
+
+        <TrainingPlanSubheading>
+          Expertly created training routines for every age, goals, and music skills.
+        </TrainingPlanSubheading>
+
+        <TrainingPlanGoals>
+          <TrainingPlanList>
+            { items.map(el => {
+              return (
+                <TrainingPlanItem key={ el.id }>
+                  <TrainingPlanCheck/>
+                  <TrainingPlanText>
+                    { el.label }
+                  </TrainingPlanText>
+                </TrainingPlanItem>
+              )
+            }) }
+          </TrainingPlanList>
+          <TrainingPlanImage/>
+        </TrainingPlanGoals>
+
+        <StartTrainingWrapper isHomeScreen>
+          <StartTrainingButton>Request your plan</StartTrainingButton>
+          <Caption>🎵 no music instrument or training needed</Caption>
+        </StartTrainingWrapper>
+      </TrainingPlanContainer>
+    )
+  }
+
   return (
     <CommonContainer
       style={ {
@@ -427,6 +491,7 @@ const Home: FC = () => {
       <WorkoutForBrain/>
       <UsingMusic/>
       <IsBraintuneForMe/>
+      <PersonalTrainingPlan/>
     </CommonContainer>
   );
 };

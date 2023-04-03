@@ -5,7 +5,11 @@ import frame from "../../images/frame.svg";
 import framemobile from "../../images/frame-mobile.svg";
 import brain from '../../images/brain.svg';
 import brainMobile from '../../images/brain-mobile.svg';
-
+import check from '../../images/check.svg';
+import checkMobile from '../../images/check-mobile.svg';
+import checkTablet from '../../images/check-tablet.svg';
+import trainingPlanBg from '../../images/training-plan-image.svg';
+import trainingPlanBgMobile from '../../images/training-plan-image-mobile.svg';
 
 export const HomeScreenContainer = styled.div`
   position: relative;
@@ -732,3 +736,146 @@ export const IsBraintuneParagraph = styled.p`
     font-size: 16px;
   }
 `;
+
+export const TrainingPlanContainer = styled.div`
+  margin-top: 182px;
+
+  @media (min-width: 320px) and (max-width: 564px) {
+    margin-top: 64px;
+  }
+
+  @media (min-width: 565px) and (max-width: 979px) {
+    margin-top: 132px;
+  }
+`;
+
+
+export const TrainingPlanHeading = styled.h1`
+  text-align: center;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+
+  @media (min-width: 320px) and (max-width: 564px) {
+    font-size: 24px;
+  }
+
+  @media (min-width: 565px) and (max-width: 979px) {
+    font-size: 36px;
+  }
+`;
+
+export const TrainingPlanSubheading = styled.h4`
+  text-align: center;
+  margin-top: 32px;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+
+  @media (min-width: 320px) and (max-width: 564px) {
+    font-size: 16px;
+  }
+
+  @media (min-width: 565px) and (max-width: 979px) {
+    font-size: 24px;
+  }
+`;
+
+export const TrainingPlanGoals = styled.div`
+  display: flex;
+  margin-top: 96px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  
+  @media (min-width: 320px) and (max-width: 564px) {
+    gap: 12px;
+    justify-content: center;
+    margin-top: 32px;
+  }
+
+  @media (min-width: 565px) and (max-width: 979px) {
+    gap: 12px;
+    justify-content: center;
+    margin-top: 64px;
+  }
+`;
+
+export const TrainingPlanList = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @media (min-width: 320px) and (max-width: 564px) {
+    gap: 16px;
+  }
+
+  @media (min-width: 565px) and (max-width: 979px) {
+    gap: 24px;
+  }
+`;
+
+export const TrainingPlanImage = styled.div`
+  width: 420px;
+  height: 420px;
+  background-image: url(${trainingPlanBg});
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  
+  @media(min-width: 320px) and (max-width: 564px) {
+    width: 342px;
+    height: 342px;
+    background-image: url(${trainingPlanBgMobile});
+  }
+`;
+
+export const TrainingPlanItem = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  
+  @media (min-width: 320px) and (max-width: 564px) {
+    gap: 8px;
+  }
+`;
+
+export const TrainingPlanCheck = styled.div`
+  height: 40px;
+  width: 41px;
+  background-image: url(${check});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+  @media (min-width: 565px) and (max-width: 979px) {
+    height: 32px;
+    width: 32px;
+    background-image: url(${checkTablet});
+  }
+
+  @media (min-width: 320px) and (max-width: 564px) {
+    height: 24px;
+    width: 25px;
+    background-image: url(${checkMobile});
+  }
+`;
+
+export const TrainingPlanText = styled.div`
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+
+  @media (min-width: 565px) and (max-width: 979px) {
+    font-size: 20px;
+  }
+
+  @media (min-width: 320px) and (max-width: 564px) {
+    font-size: 16px;
+  }
+`;
+
