@@ -10,6 +10,7 @@ import checkMobile from '../../images/check-mobile.svg';
 import checkTablet from '../../images/check-tablet.svg';
 import trainingPlanBg from '../../images/training-plan-image.svg';
 import trainingPlanBgMobile from '../../images/training-plan-image-mobile.svg';
+import guard from '../../images/guard-icon.svg';
 
 export const HomeScreenContainer = styled.div`
   position: relative;
@@ -879,3 +880,206 @@ export const TrainingPlanText = styled.div`
   }
 `;
 
+export const PreorderContainer = styled.div`
+  padding: 80px 32px;
+  background: #F8F8F8;
+  border-radius: 64px;
+  margin-top: 154px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 256px;
+  
+  @media (min-width: 320px) and (max-width: 979px) {
+    margin-bottom: 40px;
+  }
+`;
+
+export const PreorderHeading = styled.h4`
+  text-align: center;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+
+  @media (min-width: 320px) and (max-width: 564px) {
+    font-size: 24px;
+  }
+
+  @media (min-width: 565px) and (max-width: 979px) {
+    font-size: 36px;
+  }
+`;
+
+export const PreorderSubheading = styled.h4`
+  text-align: center;
+  margin-top: 32px;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  background-color: #F8F8F8;
+
+  @media (min-width: 320px) and (max-width: 564px) {
+    font-size: 16px;
+  }
+
+  @media (min-width: 565px) and (max-width: 979px) {
+    font-size: 24px;
+  }
+`;
+
+export const PreorderCard = styled.div`
+  padding: 42px 30px;
+  background: #FDFDFD;
+  margin-top: 88px;
+  border-radius: 0px 0px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const PreorderCardHeading = styled.h3`
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+`;
+
+export const PreorderCardDescription = styled.p`
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 12px;
+  text-align: center;
+  
+  @media (min-width: 545px) and (max-width: 979px) {
+    width: 75%;
+  }
+`;
+
+export const PreorderCheckboxGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 16px;
+  align-self: flex-start;
+`;
+
+export const CheckboxLabel = styled.p`
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+`;
+
+export const PreorderPrice = styled.div`
+  margin-top: 40px;
+  text-align: center;
+`;
+
+export const PreorderMainPrice = styled.span`
+  opacity: 0.2;
+  color: #000;
+  display: inline-flex;
+  align-items: center;
+  font-size: 24px;
+  
+  s {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+  }
+`
+export const PreorderDiscountPrice = styled.span`
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+`;
+
+export const PreorderButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+`;
+
+export const PreorderButton = styled.button`
+  padding: 16px 32px;
+  background: #5F3FE1;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 8px;
+  width: 139px;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+`;
+
+export const PreorderGuaranties = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 40px;
+`;
+
+export const GuardIcon = styled.div`
+  width: 28px;
+  height: 32px;
+  background-image: url(${guard});
+`;
+export const PreorderGuarantiesText = styled.div`
+  color: #4EAF51;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+`;
+
+export const ContactText = styled.p`
+  margin-top: 88px;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #212121;
+  width: 460px;
+  text-align: center;
+
+  @media (min-width: 320px) and (max-width: 564px) {
+    width: 100%;
+    padding: 12px 0;
+    margin-top: 32px;
+    font-size: 16px;
+  }
+`;
+
+export const ContactUsButton = styled.button`
+  border: 3px solid #5F3FE1;
+  border-radius: 8px;
+  color: #5F3FE1;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  cursor: pointer;
+  width: 460px;
+  padding: 18px 0;
+  margin-top: 16px;
+  background-color: #F8F8F8;;
+  
+  @media (min-width: 565px) and (max-width: 979px) {
+    border: none;
+    width: fit-content;
+  }
+
+  @media (min-width: 320px) and (max-width: 564px) {
+    width: 100%;
+    padding: 12px 0;
+  }
+`;

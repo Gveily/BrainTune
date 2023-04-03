@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { ChangeEvent, FC, useState } from "react";
 import { CommonContainer } from "../../App.styled";
 import {
   Caption,
@@ -58,7 +58,25 @@ import {
   TrainingPlanSubheading,
   TrainingPlanGoals,
   TrainingPlanList,
-  TrainingPlanItem, TrainingPlanCheck, TrainingPlanText, TrainingPlanImage,
+  TrainingPlanItem,
+  TrainingPlanCheck,
+  TrainingPlanText,
+  TrainingPlanImage,
+  PreorderContainer,
+  PreorderHeading,
+  PreorderSubheading,
+  PreorderCard,
+  PreorderCardDescription,
+  PreorderCheckboxGroup,
+  PreorderCardHeading,
+  CheckboxLabel,
+  PreorderPrice,
+  PreorderMainPrice,
+  PreorderDiscountPrice,
+  PreorderButton,
+  PreorderButtonContainer,
+  PreorderGuaranties,
+  GuardIcon, PreorderGuarantiesText, ContactText, ContactUsButton,
 } from "./home.styled";
 import founder1 from '../../images/founder-1.svg';
 import founder2 from '../../images/founder-2.svg';
@@ -80,6 +98,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination } from "swiper";
+import { Checkbox, FormControlLabel } from "@mui/material";
 
 interface IFounder {
   id: number,
@@ -478,6 +497,99 @@ const Home: FC = () => {
         </StartTrainingWrapper>
       </TrainingPlanContainer>
     )
+  };
+
+  const Preorder = () => {
+    const [isUnlimitedAccess, setIsUnlimitedAccess] = useState<boolean>(true);
+    const [isPersonalTraining, setIsPersonalTraining] = useState<boolean>(true);
+
+    const handleUnlimitedAccessChange = (event: ChangeEvent<HTMLInputElement>) => setIsUnlimitedAccess(event.target.checked);
+    const handleIsPersonalTrainingChange = (event: ChangeEvent<HTMLInputElement>) => setIsPersonalTraining(event.target.checked);
+
+    return (
+      <PreorderContainer>
+        <PreorderHeading>
+          Early-bird offer: Get <i>80% off</i>
+        </PreorderHeading>
+        <PreorderSubheading>
+          BrainTune will come out later this year, but you can preorder your membership now with
+          { ' ' }<strong><i>full money back guarantee.</i></strong>
+        </PreorderSubheading>
+        <PreorderCard>
+          <PreorderCardHeading>
+            Lifetime
+          </PreorderCardHeading>
+          <PreorderCardDescription>
+            Tired of juggling subscriptions? We feel you.
+          </PreorderCardDescription>
+          <PreorderCheckboxGroup>
+            <FormControlLabel
+              label={ <CheckboxLabel>Unlimited access</CheckboxLabel> }
+              control={
+                <Checkbox
+                  checked={ isUnlimitedAccess }
+                  onChange={ handleUnlimitedAccessChange }
+                  sx={ {
+                    color: '#5F3FE1',
+                    '&.Mui-checked': {
+                      color: '#5F3FE1'
+                    },
+                  } }
+                />
+              }
+            />
+            <FormControlLabel
+              label={ <CheckboxLabel>Personal training plan</CheckboxLabel> }
+              control={
+                <Checkbox
+                  checked={ isPersonalTraining }
+                  onChange={ handleIsPersonalTrainingChange }
+                  sx={ {
+                    color: '#5F3FE1',
+                    '&.Mui-checked': {
+                      color: '#5F3FE1'
+                    },
+                  } }
+                />
+              }
+            />
+          </PreorderCheckboxGroup>
+
+          <PreorderPrice>
+            <PreorderMainPrice>
+              $<s>300</s>
+            </PreorderMainPrice>
+            {' '}
+            <PreorderDiscountPrice>
+              $60
+            </PreorderDiscountPrice>
+          </PreorderPrice>
+
+          <PreorderButtonContainer>
+            <PreorderButton>
+              Preorder
+            </PreorderButton>
+          </PreorderButtonContainer>
+
+          <PreorderGuaranties>
+            <GuardIcon />
+            <PreorderGuarantiesText>
+              Money Back Guarantee
+            </PreorderGuarantiesText>
+          </PreorderGuaranties>
+
+        </PreorderCard>
+
+        <ContactText>
+          If you have any questions or would like to request a refund, don’t hesitate to get in touch.
+        </ContactText>
+
+        <ContactUsButton>
+          Contact us
+        </ContactUsButton>
+
+      </PreorderContainer>
+    )
   }
 
   return (
@@ -492,6 +604,7 @@ const Home: FC = () => {
       <UsingMusic/>
       <IsBraintuneForMe/>
       <PersonalTrainingPlan/>
+      <Preorder/>
     </CommonContainer>
   );
 };
