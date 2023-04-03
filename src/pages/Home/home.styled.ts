@@ -268,6 +268,7 @@ export const HowMusicalTraining = styled.div`
   @media (max-width: 744px) {
     width: 632px;
     height: 352px;
+    margin-top: 44px;
   }
 
   @media (max-width: 620px) {
@@ -275,10 +276,11 @@ export const HowMusicalTraining = styled.div`
     height: 260px;
   }
 
-  @media (max-width: 390px) {
+  @media (min-width: 320px) and (max-width: 545px) {
     background-image: url(${ framemobile });
     width: 342px;
     height: 198px;
+    margin-top: 0;
   }
 `;
 
@@ -684,6 +686,7 @@ export const IsBraintuneContainer = styled.div`
   @media (min-width: 320px) and (max-width: 564px) {
     padding: 32px 24px;
     border-radius: 16px;
+    margin-top: 64px;
   }
 `;
 
@@ -892,6 +895,14 @@ export const PreorderContainer = styled.div`
   
   @media (min-width: 320px) and (max-width: 979px) {
     margin-bottom: 40px;
+  }
+
+  @media (min-width: 320px) and (max-width: 544px) {
+    margin-top: 64px;
+  }
+
+  @media (min-width: 545px) and (max-width: 979px) {
+    margin-top: 100px;
   }
 `;
 
