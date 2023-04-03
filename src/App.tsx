@@ -1,6 +1,6 @@
-import {FC, useEffect} from "react";
+import {FC, useState} from "react";
 import {
-  AppLogo,
+  AppLogo, BurgerNavigation,
   CommonContainer, FooterContainer, FooterWrapper, HeaderBurger,
   HeaderWrapper,
   MainWrapper,
@@ -28,6 +28,37 @@ const App: FC<AppProps> = ({children}) => {
     )
   }
 
+
+
+  const Burger = () => {
+    const [isOpen, setIsOpen] = useState(false)
+    return (
+      <>
+      <HeaderBurger isOpen={isOpen} onClick={() => setIsOpen(prevState => !prevState)}>
+        <div/>
+        <div/>
+        <div/>
+      </HeaderBurger>
+      <RightNav isOpen={isOpen}/>
+      </>
+    )
+  }
+
+  const RightNav = ({isOpen}) => {
+    return (
+      <>
+      <BurgerNavigation isOpen={isOpen}>
+      <NavigationItem href='https://google.com/' target='_blank'>
+        Pricing
+      </NavigationItem>
+    <NavigationItem href='https://google.com/' target='_blank'>
+      Contact
+    </NavigationItem>
+      </BurgerNavigation>
+      </>
+    )
+  }
+
   const Header = () => {
     return (
       <CommonContainer>
@@ -41,11 +72,13 @@ const App: FC<AppProps> = ({children}) => {
               Contact
             </NavigationItem>
           </NavigationBlock>
-          <HeaderBurger/>
+          <Burger/>
         </HeaderWrapper>
       </CommonContainer>
     )
   }
+
+
 
   const Footer = () => {
     return (
@@ -61,12 +94,8 @@ const App: FC<AppProps> = ({children}) => {
                 Refunds
               </NavigationItem>
               <NavigationItem href='https://google.com/' target='_blank'>
-
-
                 Support
-              </NavigationItem
-
-              >
+              </NavigationItem>
             </NavigationBlock>
           </FooterWrapper>
         </CommonContainer>

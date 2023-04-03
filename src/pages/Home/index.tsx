@@ -175,7 +175,7 @@ const Home: FC = () => {
             We’ve partnered with experts in neurology and music education to
             design a cognitive training program that{ " " }
             <SubtitleSpan>
-              engages both hemispheres of the brain through the unique power of
+              engages both hemispheres of the brain thr`ough the unique power of
               music.
             </SubtitleSpan>
           </ImproveSubtitle>
