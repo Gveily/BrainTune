@@ -8,11 +8,13 @@ import {
   NavigationItem
 } from "./App.styled";
 import {Caption, StartTrainingButton, StartTrainingWrapper} from "./pages/Home/home.styled";
-import { BurgerMenu } from "./components/Burger-Menu";
+import {BurgerMenu} from "./components/Burger-Menu";
+import {HashLink as Link} from 'react-router-hash-link';
 
 interface AppProps {
   children: string | JSX.Element | JSX.Element[];
 }
+
 
 const App: FC<AppProps> = ({children}) => {
   const isMobile = window.innerWidth < 391;
@@ -35,14 +37,16 @@ const App: FC<AppProps> = ({children}) => {
         <HeaderWrapper>
           <AppLogo/>
           <NavigationBlock isHeader>
-            <NavigationItem href='https://google.com/' target='_blank'>
+            <Link to='#early-bird-offer'>
+            <NavigationItem href="" target='_blank'>
               Pricing
             </NavigationItem>
+            </Link>
             <NavigationItem href='https://google.com/' target='_blank'>
               Contact
             </NavigationItem>
           </NavigationBlock>
-          <BurgerMenu />
+          <BurgerMenu/>
         </HeaderWrapper>
       </CommonContainer>
     )
@@ -55,19 +59,15 @@ const App: FC<AppProps> = ({children}) => {
           <FooterWrapper>
             <AppLogo/>
             <NavigationBlock>
-              <NavigationItem href='https://google.com/' target='_blank'>
+              <NavigationItem href='' target='_blank'>
                 Privacy
               </NavigationItem>
               <NavigationItem href='https://google.com/' target='_blank'>
                 Refunds
               </NavigationItem>
               <NavigationItem href='https://google.com/' target='_blank'>
-
-
                 Support
-              </NavigationItem
-
-              >
+              </NavigationItem>
             </NavigationBlock>
           </FooterWrapper>
         </CommonContainer>

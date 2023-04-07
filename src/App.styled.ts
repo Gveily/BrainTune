@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import logo from './images/logo.svg';
-import burger from './images/burger.svg';
 
 export const CommonContainer = styled.div`
   max-width: 1000px;
@@ -62,7 +61,7 @@ export const NavigationItem = styled.a`
   font-weight: 400;
   font-size: 24px;
   position: relative;
-  z-index: 10;
+  nmz-index: 10;
 `;
 
 export const MainWrapper = styled.main`

@@ -8,6 +8,8 @@ import Home from "./pages/Home";
 import App from "./App";
 import ErrorPage from "./pages/error-page";
 import Pricing from "./pages/Pricing";
+import Paywall from "./pages/Paywall";
+
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,11 @@ const router = createBrowserRouter([
     element: <Pricing />,
     errorElement: <ErrorPage />
   },
+  {
+    path: "/paywall",
+    element: <Paywall/>,
+    errorElement: <ErrorPage/>
+  }
 ]);
 
 const root = ReactDOM.createRoot(

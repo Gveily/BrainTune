@@ -11,6 +11,7 @@ import checkTablet from '../../images/check-tablet.svg';
 import trainingPlanBg from '../../images/training-plan-image.svg';
 import trainingPlanBgMobile from '../../images/training-plan-image-mobile.svg';
 import guard from '../../images/guard-icon.svg';
+import preorderchecked from '../../images/checked-card.svg'
 
 export const HomeScreenContainer = styled.div`
   position: relative;
@@ -257,7 +258,7 @@ export const SubtitleSpan = styled.span`
 
 
 export const HowMusicalTraining = styled.div`
-  background-image: url(${ frame });
+  background-image: url(${frame});
   width: 1000px;
   height: 549px;
   background-repeat: no-repeat;
@@ -277,7 +278,7 @@ export const HowMusicalTraining = styled.div`
   }
 
   @media (min-width: 320px) and (max-width: 545px) {
-    background-image: url(${ framemobile });
+    background-image: url(${framemobile});
     width: 342px;
     height: 198px;
     margin-top: 0;
@@ -977,6 +978,18 @@ export const PreorderCheckboxGroup = styled.div`
   gap: 16px;
   align-self: flex-start;
 `;
+
+export const PreorderField = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+`
+
+export const PreorderCheckbox = styled.div`
+  background-image: url(${preorderchecked});
+  width: 20px;
+  height: 20px;
+`
 
 export const CheckboxLabel = styled.p`
   font-family: 'SF Pro Display';
