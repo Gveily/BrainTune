@@ -20,6 +20,8 @@ export const HeaderWrapper = styled.div`
   justify-content: space-between;
   width: 100%;
   margin-top: 22px;
+  position: relative;
+  z-index: 10;
 `;
 
 export const FooterContainer = styled.div`
@@ -62,6 +64,7 @@ export const NavigationItem = styled.a`
   font-size: 24px;
   position: relative;
   nmz-index: 10;
+  cursor: pointer;
 `;
 
 export const MainWrapper = styled.main`

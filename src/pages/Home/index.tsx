@@ -500,7 +500,7 @@ const Home: FC = () => {
 
   const Preorder = () => {
     return (
-      <PreorderContainer id={"early-bird-offer"}>
+      <PreorderContainer id='early-bird-offer'>
         <PreorderHeading>
           Early-bird offer: Get <i>80% off</i>
         </PreorderHeading>
@@ -555,7 +555,7 @@ const Home: FC = () => {
           If you have any questions or would like to request a refund, don’t hesitate to get in touch.
         </ContactText>
 
-        <ContactUsButton>
+        <ContactUsButton id='contact'>
           Contact us
         </ContactUsButton>
 
