@@ -135,7 +135,8 @@ const Home: FC = () => {
           through <HomeHeadingItalic>music</HomeHeadingItalic>
         </HomeHeading>
         <StartTrainingWrapper isHomeScreen>
-          <StartTrainingButton>Start training</StartTrainingButton>
+          <StartTrainingButton onClick={() => window.open('https://braintune.typeform.com/get-started')}>Start
+            training</StartTrainingButton>
           <Caption>🎵 no music instrument or training needed</Caption>
         </StartTrainingWrapper>
         <HomeBackground/>
@@ -259,7 +260,8 @@ const Home: FC = () => {
         </CarouselWrapper>
 
         <StartTrainingWrapper isHomeScreen className='transformX30'>
-          <StartTrainingButton>Start training</StartTrainingButton>
+          <StartTrainingButton onClick={() => window.open('https://braintune.typeform.com/get-started')}>Start
+            training</StartTrainingButton>
           <Caption>🎵 no music instrument or training needed</Caption>
         </StartTrainingWrapper>
         <HomeBackground/>
@@ -413,7 +415,8 @@ const Home: FC = () => {
           })}
         </UsingMusicItems>
         <StartTrainingWrapper isHomeScreen>
-          <StartTrainingButton>Choose your goals</StartTrainingButton>
+          <StartTrainingButton onClick={() => window.open('https://braintune.typeform.com/get-started')}>Choose your
+            goals</StartTrainingButton>
           <Caption>🎵 no music instrument or training needed</Caption>
         </StartTrainingWrapper>
         <HomeBackground/>
@@ -491,7 +494,8 @@ const Home: FC = () => {
         </TrainingPlanGoals>
 
         <StartTrainingWrapper isHomeScreen>
-          <StartTrainingButton>Request your plan</StartTrainingButton>
+          <StartTrainingButton onClick={() => window.open('https://braintune.typeform.com/get-started')}>Request your
+            plan</StartTrainingButton>
           <Caption>🎵 no music instrument or training needed</Caption>
         </StartTrainingWrapper>
       </TrainingPlanContainer>
@@ -537,7 +541,8 @@ const Home: FC = () => {
           </PreorderPrice>
 
           <PreorderButtonContainer>
-            <PreorderButton>
+            <PreorderButton
+              onClick={() => window.open('https://buy.stripe.com/fZe6rlcep2XzdnGbSb?prefilled_email={email}')}>
               Preorder
             </PreorderButton>
           </PreorderButtonContainer>

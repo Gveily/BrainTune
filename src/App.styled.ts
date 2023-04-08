@@ -49,7 +49,7 @@ export const AppLogo = styled.div`
 export const NavigationBlock = styled.div<{isHeader?: boolean}>`
   display: flex;
   gap: 56px;
-  
+
   @media (min-width: 320px) and (max-width: 544px) {
     display: ${(props) => props.isHeader ? 'none' : 'flex'};
     align-items: center;

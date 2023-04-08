@@ -1,4 +1,4 @@
-import { FC } from "react";
+import {FC} from "react";
 import {
   AppLogo,
   CommonContainer, FooterContainer, FooterWrapper,
@@ -7,20 +7,21 @@ import {
   NavigationBlock,
   NavigationItem
 } from "./App.styled";
-import { Caption, StartTrainingButton, StartTrainingWrapper } from "./pages/Home/home.styled";
-import { BurgerMenu } from "./components/Burger-Menu";
+import {Caption, StartTrainingButton, StartTrainingWrapper} from "./pages/Home/home.styled";
+import {BurgerMenu} from "./components/Burger-Menu";
 
 interface AppProps {
   children: string | JSX.Element | JSX.Element[];
 }
 
 
-const App: FC<AppProps> = ({ children }) => {
+const App: FC<AppProps> = ({children}) => {
   const isMobile = window.innerWidth < 391;
   const StartTrainingMobile = () => {
     return (
       <StartTrainingWrapper>
-        <StartTrainingButton>
+        <StartTrainingButton onClick={() => window.location.href = 'https://braintune.typeform.com/get-started\n' +
+          'target="_blank'}>
           Start training
         </StartTrainingButton>
         <Caption>
@@ -75,9 +76,9 @@ const App: FC<AppProps> = ({ children }) => {
   return <>
     <Header/>
     <MainWrapper>
-      { children }
+      {children}
     </MainWrapper>
-    { isMobile && <StartTrainingMobile/> }
+    {isMobile && <StartTrainingMobile/>}
     <Footer/>
   </>
 }

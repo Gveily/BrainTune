@@ -24,7 +24,7 @@ export const HomeBackground = styled.div`
   height: 627px;
   top: -140px;
   right: -140px;
-  background-image: url(${ homebg });
+  background-image: url(${homebg});
   background-repeat: no-repeat;
   background-size: cover;
   display: none;
@@ -43,7 +43,7 @@ export const HomeHeading = styled.h1`
   font-size: 80px;
   font-weight: 600;
   margin-top: 106px;
-  color: ${ (props) => props.theme.colors.primaryBlack };
+  color: ${(props) => props.theme.colors.primaryBlack};
   text-align: center;
   position: relative;
   z-index: 2;
@@ -59,7 +59,7 @@ export const HomeHeading = styled.h1`
 
 export const HomeHeadingItalic = styled.span`
   font-style: italic;
-  color: ${ (props) => props.theme.colors.primaryViolet };
+  color: ${(props) => props.theme.colors.primaryViolet};
 `;
 
 export const StartTrainingWrapper = styled.div<{ isHomeScreen?: boolean }>`
@@ -77,7 +77,7 @@ export const StartTrainingWrapper = styled.div<{ isHomeScreen?: boolean }>`
   }
 
   @media (max-width: 390px) {
-    display: ${ (props) => (props.isHomeScreen ? "none" : "flex") };
+    display: ${(props) => (props.isHomeScreen ? "none" : "flex")};
     position: -webkit-sticky;
     position: sticky;
     bottom: 0;
@@ -89,13 +89,13 @@ export const StartTrainingWrapper = styled.div<{ isHomeScreen?: boolean }>`
 
 export const StartTrainingButton = styled.button`
   text-align: center;
-  background-color: ${ (props) => props.theme.colors.primaryViolet };
+  background-color: ${(props) => props.theme.colors.primaryViolet};
   border: none;
   padding: 16px 110px;
   border-radius: 8px;
   font-size: 24px;
   font-weight: 500;
-  color: ${ (props) => props.theme.colors.buttonTextWhite };
+  color: ${(props) => props.theme.colors.buttonTextWhite};
   cursor: pointer;
   position: relative;
   z-index: 2;
@@ -109,7 +109,7 @@ export const StartTrainingButton = styled.button`
 export const Caption = styled.div`
   position: relative;
   z-index: 2;
-  color: ${ (props) => props.theme.colors.defaultBlack };
+  color: ${(props) => props.theme.colors.defaultBlack};
   font-size: 20px;
 
   @media (max-width: 390px) {
@@ -135,7 +135,7 @@ export const CardsContainer = styled.div`
 
 export const Card = styled.div`
   position: relative;
-  background: ${ (props) => props.theme.colors.cardBackground };
+  background: ${(props) => props.theme.colors.cardBackground};
   border-radius: 24px;
   padding: 16px 56px;
 
@@ -153,7 +153,7 @@ export const CardIcon = styled.div`
   left: 8px;
   top: 50%;
   transform: translateY(-50%);
-  background-image: url(${ checked });
+  background-image: url(${checked});
   width: 32px;
   height: 32px;
 
@@ -206,7 +206,7 @@ export const ImproveYourBrainDescription = styled.div`
 export const ImproveTitle = styled.h2`
   font-size: 64px;
   text-align: center;
-  color: ${ (props) => props.theme.colors.shadeOfGrey };
+  color: ${(props) => props.theme.colors.shadeOfGrey};
   @media (max-width: 744px) {
     font-size: 36px;
   }
@@ -233,7 +233,7 @@ export const ImproveSubtitle = styled.h5`
   font-family: 'SF Pro Display';
   font-weight: 400;
   line-height: 48px;
-  color: ${ (props) => props.theme.colors.shadeOfGrey };
+  color: ${(props) => props.theme.colors.shadeOfGrey};
   @media (max-width: 744px) {
     font-size: 24px;
     line-height: 36px;
@@ -309,7 +309,7 @@ export const FounderDescription = styled.div`
 export const FounderPhoto = styled.div<{ photoUrl: string }>`
   width: 72px;
   height: 72px;
-  background-image: url(${ (props) => props.photoUrl });
+  background-image: url(${(props) => props.photoUrl});
   margin-top: 24px;
 `;
 export const FounderName = styled.div`
@@ -336,7 +336,7 @@ export const FounderSeparator = styled.div`
   right: -35px;
   width: 1px;
   height: 150px;
-  background-color: ${ (props) => props.theme.colors.primaryBlack };
+  background-color: ${(props) => props.theme.colors.primaryBlack};
   opacity: 0.3;
 
   @media (min-width: 320px) and (max-width: 744px) {
@@ -353,7 +353,7 @@ export const CarouselWrapper = styled.div`
 `;
 
 export const WorkoutContainer = styled.div`
-  background-color: ${ props => props.theme.colors.fullBodyBackground };
+  background-color: ${props => props.theme.colors.fullBodyBackground};
   border-radius: 50px;
   margin-top: 154px;
   padding: 64px 32px;
@@ -371,7 +371,7 @@ export const WorkoutHeading = styled.h1`
   font-style: italic;
   font-weight: 800;
   font-size: 64px;
-  color: ${ props => props.theme.colors.primaryBlack };
+  color: ${props => props.theme.colors.primaryBlack};
 
   @media (max-width: 744px) {
     font-size: 36px;
@@ -400,7 +400,7 @@ export const WorkoutSubheading = styled.h1`
 
 export const WorkoutDescription = styled.p`
   text-align: center;
-  color: ${ props => props.theme.colors.primaryBlack };
+  color: ${props => props.theme.colors.primaryBlack};
   font-family: 'SF Pro Display';
   font-style: normal;
   font-weight: 400;
@@ -430,7 +430,7 @@ export const WorkoutBrainAndList = styled.div`
 `;
 
 export const WorkoutBrainImage = styled.div`
-  background-image: url(${ brain });
+  background-image: url(${brain});
   width: 350px;
   height: 306px;
   background-size: cover;
@@ -439,7 +439,7 @@ export const WorkoutBrainImage = styled.div`
 
 
   @media (min-width: 320px) and (max-width: 390px) {
-    background-image: url(${ brainMobile });
+    background-image: url(${brainMobile});
     width: 336px;
     height: 294px;
   }
@@ -469,7 +469,7 @@ export const WorkoutListItemNumber = styled.div<{ color: string }>`
   height: 44px;
   width: 44px;
   background-color: #fff;
-  color: ${ props => props.color ?? '#000' };
+  color: ${props => props.color ?? '#000'};
   border-radius: 50%;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   font-family: 'SF Pro Display';
@@ -517,7 +517,7 @@ export const UsingMusicHeading = styled.h1`
   font-style: italic;
   font-weight: 800;
   font-size: 64px;
-  color: ${ props => props.theme.colors.primaryBlack };
+  color: ${props => props.theme.colors.primaryBlack};
 
   @media (max-width: 744px) {
     font-size: 36px;
@@ -546,7 +546,7 @@ export const UsingMusicSubheading = styled.h1`
 
 export const UsingMusicDescription = styled.p`
   text-align: center;
-  color: ${ props => props.theme.colors.primaryBlack };
+  color: ${props => props.theme.colors.primaryBlack};
   font-family: 'SF Pro Display';
   font-style: normal;
   font-weight: 400;
@@ -568,12 +568,12 @@ export const UsingMusicItems = styled.div`
   flex-wrap: wrap;
   gap: 24px;
   margin-top: 64px;
-  
+
   @media (min-width: 320px) and (max-width: 564px) {
     justify-content: center;
     flex-direction: column;
   }
-  
+
   @media (min-width: 320px) and (max-width: 979px) {
     gap: 16px;
   }
@@ -594,7 +594,7 @@ export const UsingMusicItem = styled.div`
     padding: 16px;
     gap: 16px;
   }
-  
+
   @media (min-width: 320px) and (max-width: 564px) {
     flex-direction: column;
     align-items: center;
@@ -605,13 +605,13 @@ export const UsingMusicItem = styled.div`
 export const UsingMusicItemImage = styled.div<{ imagePath: string, tabletImagePath: string }>`
   width: 71px;
   height: 71px;
-  background-image: url(${ props => props.imagePath });
+  background-image: url(${props => props.imagePath});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
   @media (min-width: 565px) and (max-width: 979px) {
-    background-image: url(${ props => props.tabletImagePath });
+    background-image: url(${props => props.tabletImagePath});
     width: 40px;
     height: 40px;
   }
@@ -698,11 +698,11 @@ export const IsBraintuneHeading = styled.h1`
   font-size: 64px;
   color: ${props => props.theme.colors.primaryBlack};
   text-align: center;
-  
+
   @media (min-width: 565px) and (max-width: 979px) {
     font-size: 36px;
   }
-  
+
   @media (min-width: 320px) and (max-width: 564px) {
     font-size: 24px;
   }
@@ -794,7 +794,7 @@ export const TrainingPlanGoals = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap-reverse;
-  
+
   @media (min-width: 320px) and (max-width: 564px) {
     gap: 12px;
     justify-content: center;
@@ -829,9 +829,9 @@ export const TrainingPlanImage = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  
-  
-  @media(min-width: 320px) and (max-width: 564px) {
+
+
+  @media (min-width: 320px) and (max-width: 564px) {
     width: 342px;
     height: 342px;
     background-image: url(${trainingPlanBgMobile});
@@ -842,7 +842,7 @@ export const TrainingPlanItem = styled.div`
   display: flex;
   align-items: center;
   gap: 30px;
-  
+
   @media (min-width: 320px) and (max-width: 564px) {
     gap: 8px;
   }
@@ -855,7 +855,7 @@ export const TrainingPlanCheck = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  
+
   @media (min-width: 565px) and (max-width: 979px) {
     height: 32px;
     width: 32px;
@@ -893,7 +893,7 @@ export const PreorderContainer = styled.div`
   align-items: center;
   flex-direction: column;
   margin-bottom: 256px;
-  
+
   @media (min-width: 320px) and (max-width: 979px) {
     margin-bottom: 40px;
   }
@@ -965,7 +965,7 @@ export const PreorderCardDescription = styled.p`
   font-size: 18px;
   margin-top: 12px;
   text-align: center;
-  
+
   @media (min-width: 545px) and (max-width: 979px) {
     width: 75%;
   }
@@ -1009,7 +1009,7 @@ export const PreorderMainPrice = styled.span`
   display: inline-flex;
   align-items: center;
   font-size: 24px;
-  
+
   s {
     font-family: 'SF Pro Display';
     font-style: normal;
@@ -1096,7 +1096,7 @@ export const ContactUsButton = styled.button`
   padding: 18px 0;
   margin-top: 16px;
   background-color: #F8F8F8;;
-  
+
   @media (min-width: 565px) and (max-width: 979px) {
     border: none;
     width: fit-content;
