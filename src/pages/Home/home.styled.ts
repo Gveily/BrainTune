@@ -471,7 +471,7 @@ export const WorkoutListItemNumber = styled.div<{ color: string }>`
   background-color: #fff;
   color: ${props => props.color ?? '#000'};
   border-radius: 50%;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   font-family: 'SF Pro Display';
   position: absolute;
   left: -66px;
@@ -945,7 +945,7 @@ export const PreorderCard = styled.div`
   padding: 42px 30px;
   background: #FDFDFD;
   margin-top: 88px;
-  border-radius: 0px 0px 16px 16px;
+  border-radius: 0 0 16px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;

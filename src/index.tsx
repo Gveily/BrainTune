@@ -7,7 +7,6 @@ import {defaultTheme} from "./theme";
 import Home from "./pages/Home";
 import App from "./App";
 import ErrorPage from "./pages/error-page";
-import Pricing from "./pages/Pricing";
 import Paywall from "./pages/Paywall";
 
 
@@ -18,12 +17,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage/>
   },
   {
-    path: "/pricing",
-    element: <Pricing/>,
-    errorElement: <ErrorPage/>
-  },
-  {
-    path: "/paywall",
+    path: "/early-bird-preorder",
     element: <Paywall/>,
     errorElement: <ErrorPage/>
   }

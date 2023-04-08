@@ -14,27 +14,40 @@ export const PaywallWrapper = styled.div`
   padding: 79px 0 118px;
   @media (max-width: 390px) {
     padding: 40px 0 118px;
-
   }
 `
 
 export const PaywallBillboard = styled.div`
   background-image: url(${paywallbg});
-  width: 1000px;
-  height: 451px;
+  background-size: contain;
+  width: 100%;
+  height: 493px;
   margin-bottom: 64px;
+  text-align: center;
 
-  @media (max-width: 935px) and (min-width: 391px) {
+  @media (max-width: 744px) and (min-width: 391px) {
     background-image: url(${paywalltablet});
-    max-width: 696px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
     height: 360px;
   }
-  
+
   @media (max-width: 390px) {
-    width: 390px;
+    width: 100%;
     height: 360px;
     background-image: url(${paywallmobile});
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
   }
+`
+
+export const PaywallDescription = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
 `
 
 export const PaywallTitle = styled.div`
@@ -49,6 +62,13 @@ export const PaywallTitleSpan = styled.span`
   font-weight: 700;
 `
 
+export const PaywallSubtitle = styled.div`
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+`
 
 export const PaywallInformation = styled.div`
   display: flex;
@@ -63,7 +83,7 @@ export const PaywallRate = styled.div`
   gap: 176px;
   margin-top: 63px;
   position: relative;
-  
+
   @media (max-width: 744px) and (min-width: 565px) {
     display: flex;
     flex-direction: column;
@@ -71,7 +91,7 @@ export const PaywallRate = styled.div`
     gap: 100px;
     margin-bottom: 100px;
   }
-  
+
   @media (max-width: 564px) and (min-width: 391px) {
     display: flex;
     flex-direction: column;
@@ -79,7 +99,7 @@ export const PaywallRate = styled.div`
     gap: 60px;
     margin-bottom: 80px;
   }
-  
+
   @media (max-width: 390px) {
     display: flex;
     flex-direction: column;
@@ -98,7 +118,7 @@ export const PaywallRateArrow = styled.div`
   background-repeat: no-repeat;
   width: 314px;
   height: 215px;
-  
+
   @media (max-width: 835px) {
     display: none;
   }
@@ -128,7 +148,7 @@ export const PaywallCardDescription = styled.p`
   margin-top: 12px;
   text-align: center;
   line-height: 27px;
-  
+
   @media (min-width: 545px) and (max-width: 979px) {
     width: 75%;
   }
@@ -172,7 +192,7 @@ export const PaywallMainPrice = styled.span`
   display: inline-flex;
   align-items: center;
   font-size: 24px;
-  
+
   s {
     font-family: 'SF Pro Display';
     font-style: normal;
@@ -216,7 +236,6 @@ export const PaywallGuardIconCard = styled.div`
 `;
 
 
-
 export const PaywallGuaranties = styled.div`
   display: flex;
   flex-direction: column;
@@ -230,10 +249,17 @@ export const PaywallGuardIcon = styled.div`
   height: 61px;
   background-image: url(${guard});
   background-repeat: no-repeat;
+  background-size: contain;
 `;
 
 
-export const PaywallGuarantiesSubtitle = styled.h5`
+export const PaywallGuarantiesDescription = styled.h5`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+export const PaywallGuarantiesSubtitle = styled.div`
   font-family: 'SF Pro Display';
   font-style: normal;
   font-weight: 400;
@@ -274,7 +300,7 @@ export const PaywallContactUsButton = styled.button`
   padding: 18px 0;
   margin-top: 20px;
   background-color: #F8F8F8;;
-  
+
   @media (min-width: 565px) and (max-width: 979px) {
     border: none;
     width: fit-content;

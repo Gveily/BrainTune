@@ -63,7 +63,7 @@ export const NavigationItem = styled.a`
   font-weight: 400;
   font-size: 24px;
   position: relative;
-  nmz-index: 10;
+  z-index: 10;
   cursor: pointer;
 `;
 

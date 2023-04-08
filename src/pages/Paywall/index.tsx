@@ -23,7 +23,7 @@ import {
   PaywallDiscountPrice,
   PaywallButtonContainer,
   PaywallButton,
-  PaywallGuardIconCard, PaywallRateArrow
+  PaywallGuardIconCard, PaywallRateArrow, PaywallSubtitle, PaywallDescription, PaywallGuarantiesDescription
 } from "./paywall.styled";
 import {CommonContainer} from "../../App.styled";
 
@@ -32,12 +32,12 @@ const Paywall = () => {
     <CommonContainer>
       <PaywallWrapper>
         <PaywallBillboard/>
-        <PaywallTitle>BrainTune will be released later this year, but you can place your preorder now <br/>
-          with {" "} <PaywallTitleSpan>80% discount and full money back guarantee.</PaywallTitleSpan>
-          <br/>
-          <br/>
-          This is a time-limited offer.
-        </PaywallTitle>
+        <PaywallDescription>
+          <PaywallTitle>BrainTune will be released later this year, but you can place your preorder now <br/>
+            with {" "} <PaywallTitleSpan>80% discount and full money back guarantee.</PaywallTitleSpan>
+          </PaywallTitle>
+          <PaywallSubtitle>This is a time-limited offer.</PaywallSubtitle>
+        </PaywallDescription>
         <PaywallInformation>
 
           <PaywallRate>
@@ -84,14 +84,17 @@ const Paywall = () => {
 
             <PaywallGuaranties>
               <PaywallGuardIcon/>
-              <PaywallGuarantiesSubtitle>
-                <PaywallGuarantiesSpan>Get full refund</PaywallGuarantiesSpan> at any point from
-                <br/>
-                the moment of pre-order
-                and up to
-                <br/>
-                30 days after account activation.
-              </PaywallGuarantiesSubtitle>
+              <PaywallGuarantiesDescription>
+                <PaywallGuarantiesSubtitle>
+                  <PaywallGuarantiesSpan>Get full refund</PaywallGuarantiesSpan> at any point from
+                  <PaywallGuarantiesSubtitle>
+                    the moment of pre-order and up to
+                  </PaywallGuarantiesSubtitle>
+                  <PaywallGuarantiesSubtitle>
+                    30 days after account activation.
+                  </PaywallGuarantiesSubtitle>
+                </PaywallGuarantiesSubtitle>
+              </PaywallGuarantiesDescription>
             </PaywallGuaranties>
           </PaywallRate>
 
