@@ -889,7 +889,7 @@ export const PreorderContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 256px;
+  margin-bottom: 69px;
 
   @media (min-width: 320px) and (max-width: 979px) {
     margin-bottom: 40px;
