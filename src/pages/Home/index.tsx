@@ -98,6 +98,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import {Autoplay, Navigation, Pagination} from "swiper";
+import { Link } from "react-router-dom";
 
 interface IFounder {
   id: number,
@@ -563,9 +564,11 @@ const Home: FC = () => {
           If you have any questions or would like to request a refund, don’t hesitate to get in touch.
         </ContactText>
 
-        <ContactUsButton id='contact' onClick={() => window.location.href = 'mailto:gorskiipavel@gmail.com'}>
-          Contact us
-        </ContactUsButton>
+        <Link to='mailto:gorskiipavel@gmail.com'>
+          <ContactUsButton id='contact'>
+            Contact us
+          </ContactUsButton>
+        </Link>
 
       </PreorderContainer>
     )

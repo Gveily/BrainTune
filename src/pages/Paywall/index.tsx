@@ -26,6 +26,8 @@ import {
   PaywallGuardIconCard, PaywallRateArrow, PaywallSubtitle, PaywallDescription, PaywallGuarantiesDescription
 } from "./paywall.styled";
 import {CommonContainer} from "../../App.styled";
+import { ContactUsButton } from "../Home/home.styled";
+import { Link } from "react-router-dom";
 
 const Paywall = () => {
   return (
@@ -104,9 +106,12 @@ const Paywall = () => {
         <PaywallContactText>
           If you have any questions or would like to request a refund, don’t hesitate to get in touch.
         </PaywallContactText>
-        <PaywallContactUsButton onClick={() => window.location.href = 'mailto:gorskiipavel@gmail.com'}>
-           Contact us
-        </PaywallContactUsButton>
+
+        <Link to='mailto:gorskiipavel@gmail.com'>
+          <PaywallContactUsButton>
+            Contact us
+          </PaywallContactUsButton>
+        </Link>
 
       </PaywallWrapper>
     </CommonContainer>

@@ -9,6 +9,7 @@ import {
 } from "./App.styled";
 import { Caption, StartTrainingButton, StartTrainingWrapper } from "./pages/Home/home.styled";
 import { BurgerMenu } from "./components/Burger-Menu";
+import { Link } from "react-router-dom";
 
 interface AppProps {
   children: string | JSX.Element | JSX.Element[];
