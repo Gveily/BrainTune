@@ -30,7 +30,7 @@ export const BurgerMenu = () => {
           <BurgerNavigationItem onClick={handleNavigateToPricing} target='_blank'>
             Pricing
           </BurgerNavigationItem>
-          <BurgerNavigationItem href='mailto:' target='_blank'>
+          <BurgerNavigationItem href='mailto:gorskiipavel@gmail.com' target='_blank'>
             Contact
           </BurgerNavigationItem>
         </BurgerNavigation>

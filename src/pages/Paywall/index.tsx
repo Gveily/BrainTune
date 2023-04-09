@@ -40,7 +40,7 @@ const Paywall = () => {
         </PaywallDescription>
         <PaywallInformation>
 
-          <PaywallRate>
+          <PaywallRate id='early-bird-offer'>
             <PaywallCard>
               <PaywallCardHeading>
                 Lifetime
@@ -72,7 +72,7 @@ const Paywall = () => {
               </PaywallPrice>
 
               <PaywallButtonContainer>
-                <PaywallButton>
+                <PaywallButton onClick={() => window.open('https://buy.stripe.com/fZe6rlcep2XzdnGbSb?prefilled_email={email}')}>
                   Buy now
                 </PaywallButton>
               </PaywallButtonContainer>
@@ -104,8 +104,8 @@ const Paywall = () => {
         <PaywallContactText>
           If you have any questions or would like to request a refund, don’t hesitate to get in touch.
         </PaywallContactText>
-        <PaywallContactUsButton>
-          Contact us
+        <PaywallContactUsButton onClick={() => window.location.href = 'mailto:gorskiipavel@gmail.com'}>
+           Contact us
         </PaywallContactUsButton>
 
       </PaywallWrapper>

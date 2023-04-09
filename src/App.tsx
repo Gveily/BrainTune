@@ -1,4 +1,4 @@
-import {FC} from "react";
+import { FC } from "react";
 import {
   AppLogo,
   CommonContainer, FooterContainer, FooterWrapper,
@@ -7,21 +7,20 @@ import {
   NavigationBlock,
   NavigationItem
 } from "./App.styled";
-import {Caption, StartTrainingButton, StartTrainingWrapper} from "./pages/Home/home.styled";
-import {BurgerMenu} from "./components/Burger-Menu";
+import { Caption, StartTrainingButton, StartTrainingWrapper } from "./pages/Home/home.styled";
+import { BurgerMenu } from "./components/Burger-Menu";
 
 interface AppProps {
   children: string | JSX.Element | JSX.Element[];
 }
 
 
-const App: FC<AppProps> = ({children}) => {
+const App: FC<AppProps> = ({ children }) => {
   const isMobile = window.innerWidth < 391;
   const StartTrainingMobile = () => {
     return (
       <StartTrainingWrapper>
-        <StartTrainingButton onClick={() => window.location.href = 'https://braintune.typeform.com/get-started\n' +
-          'target="_blank'}>
+        <StartTrainingButton onClick={ () => window.open('https://braintune.typeform.com/get-started') }>
           Start training
         </StartTrainingButton>
         <Caption>
@@ -37,10 +36,10 @@ const App: FC<AppProps> = ({children}) => {
         <HeaderWrapper>
           <AppLogo/>
           <NavigationBlock isHeader>
-            <NavigationItem target='_blank' onClick={() => window.location.href = '#early-bird-offer'}>
+            <NavigationItem target='_blank' onClick={ () => window.location.href = '#early-bird-offer' }>
               Pricing
             </NavigationItem>
-            <NavigationItem target='_blank' href='mailto:'>
+            <NavigationItem target='_blank' href='mailto:gorskiipavel@gmail.com'>
               Contact
             </NavigationItem>
           </NavigationBlock>
@@ -76,9 +75,9 @@ const App: FC<AppProps> = ({children}) => {
   return <>
     <Header/>
     <MainWrapper>
-      {children}
+      { children }
     </MainWrapper>
-    {isMobile && <StartTrainingMobile/>}
+    { isMobile && <StartTrainingMobile/> }
     <Footer/>
   </>
 }

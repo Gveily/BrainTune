@@ -257,14 +257,11 @@ export const SubtitleSpan = styled.span`
 `;
 
 
-export const HowMusicalTraining = styled.div`
-  background-image: url(${frame});
-  width: 1000px;
+export const HowMusicalTraining = styled.iframe`
+  width: 100%;
   height: 549px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   margin-top: 100px;
+  border: none;
 
   @media (max-width: 744px) {
     width: 632px;

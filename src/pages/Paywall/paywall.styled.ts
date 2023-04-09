@@ -304,6 +304,7 @@ export const PaywallContactUsButton = styled.button`
   @media (min-width: 565px) and (max-width: 979px) {
     border: none;
     width: fit-content;
+    padding: 18px 20px;
   }
 
   @media (min-width: 320px) and (max-width: 564px) {

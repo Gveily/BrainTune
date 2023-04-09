@@ -199,7 +199,10 @@ const Home: FC = () => {
             </SubtitleSpan>
           </ImproveSubtitle>
         </ImproveYourBrainDescription>
-        <HowMusicalTraining/>
+        <HowMusicalTraining
+          src="https://player.vimeo.com/video/789693602?h=2c034abaa9&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          allow="autoplay; fullscreen; picture-in-picture" allowFullScreen
+          title="How Musical Training Shapes Your Brain" />
         <FoundersWrapper>
           {founders.map((el, index) => {
             return (
@@ -560,7 +563,7 @@ const Home: FC = () => {
           If you have any questions or would like to request a refund, don’t hesitate to get in touch.
         </ContactText>
 
-        <ContactUsButton id='contact'>
+        <ContactUsButton id='contact' onClick={() => window.location.href = 'mailto:gorskiipavel@gmail.com'}>
           Contact us
         </ContactUsButton>
 
