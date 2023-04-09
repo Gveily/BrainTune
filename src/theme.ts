@@ -11,5 +11,6 @@ export const defaultTheme = {
     cardBackground: '#F8F8F8',
     shadeOfGrey: '#212121',
     borderFrame: `#008DAB36`,
+    fullBodyBackground: '#F7F7F8'
   }
 }
