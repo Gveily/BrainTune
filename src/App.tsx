@@ -8,18 +8,20 @@ import {
   NavigationItem
 } from "./App.styled";
 import {Caption, StartTrainingButton, StartTrainingWrapper} from "./pages/Home/home.styled";
-import { BurgerMenu } from "./components/Burger-Menu";
+import {BurgerMenu} from "./components/Burger-Menu";
 
 interface AppProps {
   children: string | JSX.Element | JSX.Element[];
 }
+
 
 const App: FC<AppProps> = ({children}) => {
   const isMobile = window.innerWidth < 391;
   const StartTrainingMobile = () => {
     return (
       <StartTrainingWrapper>
-        <StartTrainingButton>
+        <StartTrainingButton onClick={() => window.location.href = 'https://braintune.typeform.com/get-started\n' +
+          'target="_blank'}>
           Start training
         </StartTrainingButton>
         <Caption>
@@ -35,14 +37,14 @@ const App: FC<AppProps> = ({children}) => {
         <HeaderWrapper>
           <AppLogo/>
           <NavigationBlock isHeader>
-            <NavigationItem href='https://google.com/' target='_blank'>
+            <NavigationItem target='_blank' onClick={() => window.location.href = '#early-bird-offer'}>
               Pricing
             </NavigationItem>
-            <NavigationItem href='https://google.com/' target='_blank'>
+            <NavigationItem target='_blank' href='mailto:'>
               Contact
             </NavigationItem>
           </NavigationBlock>
-          <BurgerMenu />
+          <BurgerMenu/>
         </HeaderWrapper>
       </CommonContainer>
     )
@@ -50,24 +52,20 @@ const App: FC<AppProps> = ({children}) => {
 
   const Footer = () => {
     return (
-      <FooterContainer>
+      <FooterContainer id='early-bird-offer'>
         <CommonContainer>
           <FooterWrapper>
             <AppLogo/>
             <NavigationBlock>
-              <NavigationItem href='https://google.com/' target='_blank'>
+              <NavigationItem href='' target='_blank'>
                 Privacy
               </NavigationItem>
               <NavigationItem href='https://google.com/' target='_blank'>
                 Refunds
               </NavigationItem>
               <NavigationItem href='https://google.com/' target='_blank'>
-
-
                 Support
-              </NavigationItem
-
-              >
+              </NavigationItem>
             </NavigationBlock>
           </FooterWrapper>
         </CommonContainer>

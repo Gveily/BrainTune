@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import logo from './images/logo.svg';
-import burger from './images/burger.svg';
 
 export const CommonContainer = styled.div`
   max-width: 1000px;
@@ -21,6 +20,8 @@ export const HeaderWrapper = styled.div`
   justify-content: space-between;
   width: 100%;
   margin-top: 22px;
+  position: relative;
+  z-index: 10;
 `;
 
 export const FooterContainer = styled.div`
@@ -48,7 +49,7 @@ export const AppLogo = styled.div`
 export const NavigationBlock = styled.div<{isHeader?: boolean}>`
   display: flex;
   gap: 56px;
-  
+
   @media (min-width: 320px) and (max-width: 544px) {
     display: ${(props) => props.isHeader ? 'none' : 'flex'};
     align-items: center;
@@ -63,6 +64,7 @@ export const NavigationItem = styled.a`
   font-size: 24px;
   position: relative;
   z-index: 10;
+  cursor: pointer;
 `;
 
 export const MainWrapper = styled.main`

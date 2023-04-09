@@ -15,6 +15,11 @@ export const BurgerMenu = () => {
     setIsOpen(prevState => !prevState);
   }
 
+  const handleNavigateToPricing = () => {
+    window.location.href = '#early-bird-offer';
+    setIsOpen(false);
+  }
+
   return (
     <BurgerWrapper>
       <Burger isOpen={isOpen} onClick={handleClick}/>
@@ -22,10 +27,10 @@ export const BurgerMenu = () => {
         <BurgerAppLogo/>
 
         <BurgerNavigation>
-          <BurgerNavigationItem href='https://google.com/' target='_blank'>
+          <BurgerNavigationItem onClick={handleNavigateToPricing} target='_blank'>
             Pricing
           </BurgerNavigationItem>
-          <BurgerNavigationItem href='https://google.com/' target='_blank'>
+          <BurgerNavigationItem href='mailto:' target='_blank'>
             Contact
           </BurgerNavigationItem>
         </BurgerNavigation>

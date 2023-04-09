@@ -1,5 +1,5 @@
-import { ChangeEvent, FC, useState } from "react";
-import { CommonContainer } from "../../App.styled";
+import {FC} from "react";
+import {CommonContainer} from "../../App.styled";
 import {
   Caption,
   Card,
@@ -76,7 +76,7 @@ import {
   PreorderButton,
   PreorderButtonContainer,
   PreorderGuaranties,
-  GuardIcon, PreorderGuarantiesText, ContactText, ContactUsButton,
+  GuardIcon, PreorderGuarantiesText, ContactText, ContactUsButton, PreorderField, PreorderCheckbox,
 } from "./home.styled";
 import founder1 from '../../images/founder-1.svg';
 import founder2 from '../../images/founder-2.svg';
@@ -93,12 +93,11 @@ import cardCreativity40 from '../../images/card-creativity-40.svg';
 import cardHand40 from '../../images/card-hand-40.svg';
 import cardPerson40 from '../../images/card-person-40.svg';
 import cardEar40 from '../../images/card-ear-40.svg';
-import { Swiper, SwiperSlide } from "swiper/react";
+import {Swiper, SwiperSlide} from "swiper/react";
 
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Autoplay, Navigation, Pagination } from "swiper";
-import { Checkbox, FormControlLabel } from "@mui/material";
+import {Autoplay, Navigation, Pagination} from "swiper";
 
 interface IFounder {
   id: number,
@@ -136,21 +135,22 @@ const Home: FC = () => {
           through <HomeHeadingItalic>music</HomeHeadingItalic>
         </HomeHeading>
         <StartTrainingWrapper isHomeScreen>
-          <StartTrainingButton>Start training</StartTrainingButton>
+          <StartTrainingButton onClick={() => window.open('https://braintune.typeform.com/get-started')}>Start
+            training</StartTrainingButton>
           <Caption>🎵 no music instrument or training needed</Caption>
         </StartTrainingWrapper>
         <HomeBackground/>
 
         <CardsContainer>
-          { cards.map((item) => {
+          {cards.map((item) => {
             return (
-              <Card key={ item.id }>
+              <Card key={item.id}>
                 <CardIcon/>
-                <CardTitle>{ item.label }</CardTitle>
-                <CardDescription>{ item.description }</CardDescription>
+                <CardTitle>{item.label}</CardTitle>
+                <CardDescription>{item.description}</CardDescription>
               </Card>
             );
-          }) }
+          })}
         </CardsContainer>
       </HomeScreenContainer>
     );
@@ -192,7 +192,7 @@ const Home: FC = () => {
           </ImproveTitle>
           <ImproveSubtitle>
             We’ve partnered with experts in neurology and music education to
-            design a cognitive training program that{ " " }
+            design a cognitive training program that{" "}
             <SubtitleSpan>
               engages both hemispheres of the brain through the unique power of
               music.
@@ -201,66 +201,67 @@ const Home: FC = () => {
         </ImproveYourBrainDescription>
         <HowMusicalTraining/>
         <FoundersWrapper>
-          { founders.map((el, index) => {
+          {founders.map((el, index) => {
             return (
-              <FounderItem key={ el.id }>
+              <FounderItem key={el.id}>
                 <FounderDescription>
-                  { el.description }
+                  {el.description}
                 </FounderDescription>
-                <FounderPhoto photoUrl={ el.photoUrl }/>
+                <FounderPhoto photoUrl={el.photoUrl}/>
                 <FounderName>
-                  { el.name }
+                  {el.name}
                 </FounderName>
-                <FounderPosition>{ el.position }</FounderPosition>
-                <FounderJob>{ el.job }</FounderJob>
-                <FounderSeparator style={ {
+                <FounderPosition>{el.position}</FounderPosition>
+                <FounderJob>{el.job}</FounderJob>
+                <FounderSeparator style={{
                   display: index === founders.length - 1 ? 'none' : 'block'
-                } }/>
+                }}/>
               </FounderItem>
             )
-          }) }
+          })}
         </FoundersWrapper>
 
         <CarouselWrapper>
           <Swiper
-            slidesPerView={ 1 }
-            spaceBetween={ 40 }
+            slidesPerView={1}
+            spaceBetween={40}
             navigation
             centeredSlides
-            modules={ [Autoplay, Pagination, Navigation] }
-            pagination={ { clickable: true } }
-            scrollbar={ { draggable: true } }
+            modules={[Autoplay, Pagination, Navigation]}
+            pagination={{clickable: true}}
+            scrollbar={{draggable: true}}
             className='swiper'
-            autoplay={ {
+            autoplay={{
               delay: 2500,
               disableOnInteraction: false,
-            } }
+            }}
           >
-            { founders.map((el, index) => {
+            {founders.map((el, index) => {
               return (
                 <SwiperSlide className='swiper-slider-item'>
-                  <FounderItem key={ el.id }>
+                  <FounderItem key={el.id}>
                     <FounderDescription>
-                      { el.description }
+                      {el.description}
                     </FounderDescription>
-                    <FounderPhoto photoUrl={ el.photoUrl }/>
+                    <FounderPhoto photoUrl={el.photoUrl}/>
                     <FounderName>
-                      { el.name }
+                      {el.name}
                     </FounderName>
-                    <FounderPosition>{ el.position }</FounderPosition>
-                    <FounderJob>{ el.job }</FounderJob>
-                    <FounderSeparator style={ {
+                    <FounderPosition>{el.position}</FounderPosition>
+                    <FounderJob>{el.job}</FounderJob>
+                    <FounderSeparator style={{
                       display: index === founders.length - 1 ? 'none' : 'block'
-                    } }/>
+                    }}/>
                   </FounderItem>
                 </SwiperSlide>
               )
-            }) }
+            })}
           </Swiper>
         </CarouselWrapper>
 
         <StartTrainingWrapper isHomeScreen className='transformX30'>
-          <StartTrainingButton>Start training</StartTrainingButton>
+          <StartTrainingButton onClick={() => window.open('https://braintune.typeform.com/get-started')}>Start
+            training</StartTrainingButton>
           <Caption>🎵 no music instrument or training needed</Caption>
         </StartTrainingWrapper>
         <HomeBackground/>
@@ -310,7 +311,7 @@ const Home: FC = () => {
     return (
       <WorkoutContainer>
         <WorkoutHeading>
-          <WorkoutSubheading>“Full body” workout</WorkoutSubheading>{ ' ' }
+          <WorkoutSubheading>“Full body” workout</WorkoutSubheading>{' '}
           for your brain
         </WorkoutHeading>
         <WorkoutDescription>
@@ -324,11 +325,11 @@ const Home: FC = () => {
             {
               workoutList.map((el) => {
                 return (
-                  <WorkoutListItem key={ el.id }>
-                    <WorkoutListItemNumber color={ el.color }>
-                      { el.id }
+                  <WorkoutListItem key={el.id}>
+                    <WorkoutListItemNumber color={el.color}>
+                      {el.id}
                     </WorkoutListItemNumber>
-                    <WorkoutListItemText>{ el.text }</WorkoutListItemText>
+                    <WorkoutListItemText>{el.text}</WorkoutListItemText>
                   </WorkoutListItem>
                 )
               })
@@ -388,7 +389,7 @@ const Home: FC = () => {
     return (
       <UsingMusicContainer>
         <UsingMusicHeading>
-          <UsingMusicSubheading>Using Music For</UsingMusicSubheading>{ ' ' }
+          <UsingMusicSubheading>Using Music For</UsingMusicSubheading>{' '}
           Non-Musical Goals
         </UsingMusicHeading>
         <UsingMusicDescription>
@@ -397,24 +398,25 @@ const Home: FC = () => {
           musical domain.
         </UsingMusicDescription>
         <UsingMusicItems>
-          { items.map(el => {
+          {items.map(el => {
             return (
-              <UsingMusicItem key={ el.id }>
-                <UsingMusicItemImage imagePath={ el.imagePath } tabletImagePath={ el.tabletImagePath }/>
+              <UsingMusicItem key={el.id}>
+                <UsingMusicItemImage imagePath={el.imagePath} tabletImagePath={el.tabletImagePath}/>
                 <UsingMusicItemTextWrapper>
                   <UsingMusicItemHeading>
-                    { el.title }
+                    {el.title}
                   </UsingMusicItemHeading>
                   <UsingMusicItemDescription>
-                    { el.description }
+                    {el.description}
                   </UsingMusicItemDescription>
                 </UsingMusicItemTextWrapper>
               </UsingMusicItem>
             )
-          }) }
+          })}
         </UsingMusicItems>
         <StartTrainingWrapper isHomeScreen>
-          <StartTrainingButton>Choose your goals</StartTrainingButton>
+          <StartTrainingButton onClick={() => window.open('https://braintune.typeform.com/get-started')}>Choose your
+            goals</StartTrainingButton>
           <Caption>🎵 no music instrument or training needed</Caption>
         </StartTrainingWrapper>
         <HomeBackground/>
@@ -477,22 +479,23 @@ const Home: FC = () => {
 
         <TrainingPlanGoals>
           <TrainingPlanList>
-            { items.map(el => {
+            {items.map(el => {
               return (
-                <TrainingPlanItem key={ el.id }>
+                <TrainingPlanItem key={el.id}>
                   <TrainingPlanCheck/>
                   <TrainingPlanText>
-                    { el.label }
+                    {el.label}
                   </TrainingPlanText>
                 </TrainingPlanItem>
               )
-            }) }
+            })}
           </TrainingPlanList>
           <TrainingPlanImage/>
         </TrainingPlanGoals>
 
         <StartTrainingWrapper isHomeScreen>
-          <StartTrainingButton>Request your plan</StartTrainingButton>
+          <StartTrainingButton onClick={() => window.open('https://braintune.typeform.com/get-started')}>Request your
+            plan</StartTrainingButton>
           <Caption>🎵 no music instrument or training needed</Caption>
         </StartTrainingWrapper>
       </TrainingPlanContainer>
@@ -500,20 +503,14 @@ const Home: FC = () => {
   };
 
   const Preorder = () => {
-    const [isUnlimitedAccess, setIsUnlimitedAccess] = useState<boolean>(true);
-    const [isPersonalTraining, setIsPersonalTraining] = useState<boolean>(true);
-
-    const handleUnlimitedAccessChange = (event: ChangeEvent<HTMLInputElement>) => setIsUnlimitedAccess(event.target.checked);
-    const handleIsPersonalTrainingChange = (event: ChangeEvent<HTMLInputElement>) => setIsPersonalTraining(event.target.checked);
-
     return (
-      <PreorderContainer>
+      <PreorderContainer id='early-bird-offer'>
         <PreorderHeading>
           Early-bird offer: Get <i>80% off</i>
         </PreorderHeading>
         <PreorderSubheading>
           BrainTune will come out later this year, but you can preorder your membership now with
-          { ' ' }<strong><i>full money back guarantee.</i></strong>
+          {' '}<strong><i>full money back guarantee.</i></strong>
         </PreorderSubheading>
         <PreorderCard>
           <PreorderCardHeading>
@@ -523,36 +520,14 @@ const Home: FC = () => {
             Tired of juggling subscriptions? We feel you.
           </PreorderCardDescription>
           <PreorderCheckboxGroup>
-            <FormControlLabel
-              label={ <CheckboxLabel>Unlimited access</CheckboxLabel> }
-              control={
-                <Checkbox
-                  checked={ isUnlimitedAccess }
-                  onChange={ handleUnlimitedAccessChange }
-                  sx={ {
-                    color: '#5F3FE1',
-                    '&.Mui-checked': {
-                      color: '#5F3FE1'
-                    },
-                  } }
-                />
-              }
-            />
-            <FormControlLabel
-              label={ <CheckboxLabel>Personal training plan</CheckboxLabel> }
-              control={
-                <Checkbox
-                  checked={ isPersonalTraining }
-                  onChange={ handleIsPersonalTrainingChange }
-                  sx={ {
-                    color: '#5F3FE1',
-                    '&.Mui-checked': {
-                      color: '#5F3FE1'
-                    },
-                  } }
-                />
-              }
-            />
+            <PreorderField>
+              <PreorderCheckbox/>
+              <CheckboxLabel>Unlimited access</CheckboxLabel>
+            </PreorderField>
+            <PreorderField>
+              <PreorderCheckbox/>
+              <CheckboxLabel>Personal training plan</CheckboxLabel>
+            </PreorderField>
           </PreorderCheckboxGroup>
 
           <PreorderPrice>
@@ -566,13 +541,14 @@ const Home: FC = () => {
           </PreorderPrice>
 
           <PreorderButtonContainer>
-            <PreorderButton>
+            <PreorderButton
+              onClick={() => window.open('https://buy.stripe.com/fZe6rlcep2XzdnGbSb?prefilled_email={email}')}>
               Preorder
             </PreorderButton>
           </PreorderButtonContainer>
 
           <PreorderGuaranties>
-            <GuardIcon />
+            <GuardIcon/>
             <PreorderGuarantiesText>
               Money Back Guarantee
             </PreorderGuarantiesText>
@@ -584,7 +560,7 @@ const Home: FC = () => {
           If you have any questions or would like to request a refund, don’t hesitate to get in touch.
         </ContactText>
 
-        <ContactUsButton>
+        <ContactUsButton id='contact'>
           Contact us
         </ContactUsButton>
 
@@ -594,9 +570,9 @@ const Home: FC = () => {
 
   return (
     <CommonContainer
-      style={ {
+      style={{
         position: "relative",
-      } }
+      }}
     >
       <StartScreen/>
       <ImproveYourBrain/>
