@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import homebg from "../../images/home-bg.svg";
 import checked from "../../images/checked-icon.svg";
-import frame from "../../images/frame.svg";
 import framemobile from "../../images/frame-mobile.svg";
 import brain from '../../images/brain.svg';
 import brainMobile from '../../images/brain-mobile.svg';
