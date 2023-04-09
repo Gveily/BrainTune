@@ -14,7 +14,6 @@ interface AppProps {
   children: string | JSX.Element | JSX.Element[];
 }
 
-
 const App: FC<AppProps> = ({ children }) => {
   const isMobile = window.innerWidth < 391;
   const StartTrainingMobile = () => {
